@@ -1,0 +1,12 @@
+name: geologic-map-uk-fossils
+title: geologic-map-uk-fossils
+username: richardstockey
+account: richardstockey
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11089581
+bundleId: 8204285
+url: https://richardstockey.shinyapps.io/geologic-map-uk-fossils/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
