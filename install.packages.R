@@ -4,4 +4,5 @@ install.packages("devtools")
 install.packages("maps")
 install.packages("rphylopic")
 install.packages("deeptime")
+install.packages("shiny")
 
