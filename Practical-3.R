@@ -26,7 +26,7 @@ sepkoski_curve(title="Sepkoski's curve", col="black", fill=TRUE, legend=FALSE)
 
 # The sepkoski data is split up by GENUS
 # we can see this if we summarise the data frame
-summarise(sepkoski)
+summary(sepkoski)
 
 # or if we view the dataframe itself
 View(sepkoski)
@@ -96,11 +96,12 @@ ggplot(sepkoski_sum, aes(x = phylum, ymin = phylum_min_ma, ymax = phylum_max_ma)
 # the temporal ranges of different CLASSES of marine animals, colour coded by PHYLUM
 
 # to get you started, your code might look something like....
+# you will need to replace every instance of "xxx"
 sepkoski_sum2 <- sepkoski %>%
   group_by(xxx, xxx) %>%
-  summarise(xxx_max_ma = max(xxx), xxx_min_ma = min(xxx))
+  summarise(class_max_ma = max(xxx), class_min_ma = min(xxx))
 
-ggplot(sepkoski_sum2, aes(x = xxx, ymin = xxx, ymax = xxx))+
+ggplot(sepkoski_sum2, aes(x = class, ymin = class_min_ma, ymax = class_max_ma))+
   geom_linerange(aes(colour = xxx))+
   scale_y_reverse()+
   theme_bw()+
