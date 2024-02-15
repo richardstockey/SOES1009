@@ -5,7 +5,7 @@ install_github('richardstockey/paleogeographR', force = TRUE) # this is a packag
 ###########################################################################
 ########################### Activity 4 ####################################
 ###########################################################################
-
+library(PaleogeographR)
 ##### This function from the paleogeographR package enables us to plot palaeogeographic maps
 # the "age" variable corresponds to geologic age in millions of years
 # the "age" variable corresponds to the number of levels in the scale bar
