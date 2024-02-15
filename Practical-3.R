@@ -67,23 +67,23 @@ View(sepkoski_sum)
 library(ggplot2)
 
 # Now generate a geom_linerange plot using the summary data frame we just made!
-ggplot(sepkoski_sum, aes(x = class, ymin = class_min_ma, ymax = class_max_ma))+
+ggplot(sepkoski_sum, aes(x = phylum, ymin = phylum_min_ma, ymax = phylum_max_ma))+
   geom_linerange()
 
 # We can improve the aesthetics of this figure in a number of ways:
 # 1. by reversing the y axis
-ggplot(sepkoski_sum, aes(x = class, ymin = class_min_ma, ymax = class_max_ma))+
+ggplot(sepkoski_sum, aes(x = phylum, ymin = phylum_min_ma, ymax = phylum_max_ma))+
   geom_linerange()+
   scale_y_reverse()
 
 # 2. by adding a white background
-ggplot(sepkoski_sum, aes(x = class, ymin = class_min_ma, ymax = class_max_ma))+
+ggplot(sepkoski_sum, aes(x = phylum, ymin = phylum_min_ma, ymax = phylum_max_ma))+
   geom_linerange()+
   scale_y_reverse()+
   theme_bw()
 
 # 3. by formatting our x axis labels to make them easier to read (you dont need to know why this works at this stage!)
-ggplot(sepkoski_sum, aes(x = class, ymin = class_min_ma, ymax = class_max_ma))+
+ggplot(sepkoski_sum, aes(x = phylum, ymin = phylum_min_ma, ymax = phylum_max_ma))+
   geom_linerange()+
   scale_y_reverse()+
   theme_bw()+
