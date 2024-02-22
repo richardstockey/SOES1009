@@ -50,8 +50,8 @@ library(dplyr)
 # this enables us to generate summary data columns in our summary table.
 # we can then define these columns
 # Here we generate two columns
-# 1. class_max_ma - using the "max()" function on all of the max_ma maximum age values for each genus within a grouping
-# 2. class_min_ma - using the "min()" function on all of the min_ma minimum age values for each genus within a grouping
+# 1. phylum_max_ma - using the "max()" function on all of the max_ma maximum age values for each genus within a grouping
+# 2. phylum_min_ma - using the "min()" function on all of the min_ma minimum age values for each genus within a grouping
 
 sepkoski_sum <- sepkoski %>%
   group_by(phylum) %>%
