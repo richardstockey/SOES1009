@@ -1,7 +1,8 @@
 # if you think you might be missing any packages (i.e. if you are using a different computer to last week),
 # run install.packages.R and any other installation lines from other scripts from the module GitHub
 #
-
+library(ggplot2)
+library(dplyr)
 # Load the data for this practical
 load("~/SOES1009/Practical-5-6-model-data.RData")
 
