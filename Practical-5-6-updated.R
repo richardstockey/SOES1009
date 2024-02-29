@@ -52,7 +52,17 @@ ggplot(data = Eocene_SST, aes(xmin = lon.min, xmax = lon.max, ymin = lat.min, ym
   ylab("Latitude (°)")+
   labs(fill = "SST (°C)")
 
-## Example surface air temperature map (Figure 3 panel)
+## Example sea ice thickness map (Figure 3 panel)
+ggplot(data = Eocene_seaice, aes(xmin = lon.min, xmax = lon.max, ymin = lat.min, ymax = lat.max, fill = sea_ice))+
+  geom_rect()+
+  scale_fill_viridis_c(option = "viridis", limits = c(0,5))+
+  coord_cartesian(expand = FALSE)+
+  theme_bw(20)+
+  xlab("Longitude (°)")+
+  ylab("Latitude (°)")+
+  labs(fill = "Surface Ice\nThickness (m)")
+
+## Example surface air temperature map (Figure 4 panel)
 ggplot(data = Eocene_surfT, aes(xmin = lon.min, xmax = lon.max, ymin = lat.min, ymax = lat.max, fill = surfT))+
   geom_rect()+
   scale_fill_viridis_c(option = "inferno", limits = c(-10,45))+
@@ -62,15 +72,7 @@ ggplot(data = Eocene_surfT, aes(xmin = lon.min, xmax = lon.max, ymin = lat.min, 
   ylab("Latitude (°)")+
   labs(fill = "Surface Air\nTemperature (°C)")
 
-## Example sea ice thickness map (Figure 4 panel)
-ggplot(data = Eocene_seaice, aes(xmin = lon.min, xmax = lon.max, ymin = lat.min, ymax = lat.max, fill = sea_ice))+
-  geom_rect()+
-  scale_fill_viridis_c(option = "viridis", limits = c(0,5))+
-  coord_cartesian(expand = FALSE)+
-  theme_bw(20)+
-  xlab("Longitude (°)")+
-  ylab("Latitude (°)")+
-  labs(fill = "Surface Ice\nThickness (m)")
+
 
 # *************************************************
 # We will now work through how to generate a latitudinal summary of the data and plot it
