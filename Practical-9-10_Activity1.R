@@ -1,5 +1,12 @@
 #SOES 1009 - Practicals 8/9: Biodiversity curves and mass extinctions
 
+#we need to install the divDyn package if you haven't already
+install.packages('divDyn')
+library(divDyn)
+
+#you'll also want ggplot
+library(ggplot2)
+
 #load your Practical_9-10_Phanerozoic_data.RData:
 #==== FILL IN HERE ====#
 
