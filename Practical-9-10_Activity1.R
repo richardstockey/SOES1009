@@ -269,9 +269,9 @@ get_phanerozoic_collections <- function(taxonomic_data, your_stages){
    
     #Now, use your count_collections function to calculate generic richness
     #HINT: Remember what your two inputs are for your count_collections() function.
-    this.stage.richness <-  #=== FILL IN HERE ====#
+    this.stage.collection_nos <-  #=== FILL IN HERE ====#
     
-    collections_per_stage[i] <- this.stage.richness #and then we want to save that in the blank vector we set up
+    collections_per_stage[i] <- this.stage.collection_nos #and then we want to save that in the blank vector we set up
     
   }
   
@@ -288,7 +288,7 @@ some_stages <- phanerozoic_stages[20:25]
 get_phanerozoic_collections(trilobite_data, some_stages)
 #which stages do each of those outputs correspond to? (Hint: what stages are some_stages?)
 
-#Using that as an example, calculate richness in each stage using get_phanerozoic_richness and save it to part1_results:
+#Using that as an example, calculate the number of collections in each stage using get_phanerozoic_collections and save it to part2_temporal_results:
 #Trilobites
 part2_temporal_results$trilobites <- #=== FILL IN HERE ====#
 
