@@ -95,15 +95,14 @@ global_lepidodendron_pbdb_data$mid_ma <- rowMeans(cbind(global_lepidodendron_pbd
 #################### ACTIVITY 3 ############################
 ############################################################
 
-# Download Paleobiology Database data for the UK
-# UK_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?cc=UK&pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo"
-# 
-# UK_pbdb_data <- read_csv(UK_pbdb_url)
-# 
-# # Generate best estimate of occurence age by taking the mean of the minimum and maximum age step
-# # for each fossil occurence (i.e. each row of the dataframe)
-# UK_pbdb_data$mid_ma <- rowMeans(cbind(UK_pbdb_data$min_ma, UK_pbdb_data$max_ma))
-# 
-# # Now, it is your turn to generate the plot described in Activity 3...
 
-load("~/SOES1009/UK_pbdb_data.RData")
+# Download Paleobiology Database data for the UK
+UK_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?cc=UK&pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo"
+
+UK_pbdb_data <- read_csv(UK_pbdb_url)
+
+# Generate best estimate of occurence age by taking the mean of the minimum and maximum age step
+# for each fossil occurence (i.e. each row of the dataframe)
+UK_pbdb_data$mid_ma <- rowMeans(cbind(UK_pbdb_data$min_ma, UK_pbdb_data$max_ma))
+
+# Now, it is your turn to generate the plot described in Activity 3...
