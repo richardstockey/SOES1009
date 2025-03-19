@@ -14,7 +14,7 @@ library(paletteer)
 #################### ACTIVITY 2 ############################
 ############################################################
 
-####################### Fig. 4  ############################
+####################### ichthyosaurs  ############################
 
 # download PBDB data
 global_ichthyosaur_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo&base_name=Ichthyosauria"
@@ -54,7 +54,7 @@ ggplot(data = ichthyosaur.map.data, aes(xmin = lon.min, xmax = lon.max, ymin = l
   ylab("Latitude (°)")+
   labs(fill = "Topography (m)")
 
-####################### Fig. 5  ############################
+####################### mammoths  ############################
 
 # download PBDB data
 global_mammoth_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo&base_name=mammuthus"
@@ -73,7 +73,7 @@ global_mammoth_pbdb_data$mid_ma <- rowMeans(cbind(global_mammoth_pbdb_data$min_m
 
 
 
-####################### Fig. 6  ############################
+####################### lepidodendrons ############################
 
 # download PBDB data
 global_lepidodendron_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo&base_name=lepidodendron"
