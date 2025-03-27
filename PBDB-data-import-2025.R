@@ -1,3 +1,7 @@
+#### Load required packages ####
+library(dplyr)
+library(ggplot2)
+
 #### Load in Phanerozoic PBDB data - this may take a few seconds (or as many as a couple of minutes!) ####
 
 load(url("https://raw.githubusercontent.com/richardstockey/SOES1009/main/Practical_9-10_Phanerozoic_data.RData"))
