@@ -1,5 +1,12 @@
 install.packages('devtools')
 devtools::install_github('richardstockey/PaleogeographR', force = TRUE)
+
+# Note – if you have issues downloading PaleogeographR, try a different approach. 
+# go to https://github.com/richardstockey/PaleogeographR/blob/main/PaleogeographR_0.0.0.9000.tgz
+# download this file (click on '...' in top right corner and click 'download')
+# install package from this file. 
+# install.packages("PaleogeographR_0.0.0.9000.tgz", repos = NULL)
+# you will have to navigate to the folder it is stored in or change the file path... 
 install.packages('readr')
 install.packages('ggplot2')
 install.packages('dplyr')
