@@ -1,3 +1,4 @@
+install.packages('devtools')
 devtools::install_github('richardstockey/PaleogeographR', force = TRUE)
 install.packages('readr')
 install.packages('ggplot2')
