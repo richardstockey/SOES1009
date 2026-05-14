@@ -21,7 +21,7 @@ if(!require(paleteer)) {
   library(paletteer)
 }
 
-library(PaleogeographR)
+# library(PaleogeographR)
 library(ggplot2)
 library(readr)
 library(dplyr)
