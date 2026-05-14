@@ -4,7 +4,7 @@
 library(ggplot2)
 library(dplyr)
 # Load the data for this practical
-load("~/SOES1009/Practical-5-6-model-data.RData")
+load("~/SOES1009/Practical-4-2025-model-data.RData")
 
 # this RData file contains the following R data frames:
 Cretaceous_SST # Sea surface temperature in °C

@@ -1,4 +1,12 @@
+install.packages('devtools')
 devtools::install_github('richardstockey/PaleogeographR', force = TRUE)
+
+# Note – if you have issues downloading PaleogeographR, try a different approach. 
+# go to https://github.com/richardstockey/PaleogeographR/blob/main/PaleogeographR_0.0.0.9000.tgz
+# download this file (click on '...' in top right corner and click 'download')
+# install package from this file. 
+# install.packages("PaleogeographR_0.0.0.9000.tgz", repos = NULL)
+# you will have to navigate to the folder it is stored in or change the file path... 
 install.packages('readr')
 install.packages('ggplot2')
 install.packages('dplyr')
@@ -14,7 +22,7 @@ library(paletteer)
 #################### ACTIVITY 2 ############################
 ############################################################
 
-####################### Fig. 4  ############################
+####################### ichthyosaurs  ############################
 
 # download PBDB data
 global_ichthyosaur_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo&base_name=Ichthyosauria"
@@ -54,7 +62,7 @@ ggplot(data = ichthyosaur.map.data, aes(xmin = lon.min, xmax = lon.max, ymin = l
   ylab("Latitude (°)")+
   labs(fill = "Topography (m)")
 
-####################### Fig. 5  ############################
+####################### mammoths  ############################
 
 # download PBDB data
 global_mammoth_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo&base_name=mammuthus"
@@ -73,7 +81,7 @@ global_mammoth_pbdb_data$mid_ma <- rowMeans(cbind(global_mammoth_pbdb_data$min_m
 
 
 
-####################### Fig. 6  ############################
+####################### lepidodendrons ############################
 
 # download PBDB data
 global_lepidodendron_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo&base_name=lepidodendron"
@@ -95,15 +103,14 @@ global_lepidodendron_pbdb_data$mid_ma <- rowMeans(cbind(global_lepidodendron_pbd
 #################### ACTIVITY 3 ############################
 ############################################################
 
-# Download Paleobiology Database data for the UK
-# UK_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?cc=UK&pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo"
-# 
-# UK_pbdb_data <- read_csv(UK_pbdb_url)
-# 
-# # Generate best estimate of occurence age by taking the mean of the minimum and maximum age step
-# # for each fossil occurence (i.e. each row of the dataframe)
-# UK_pbdb_data$mid_ma <- rowMeans(cbind(UK_pbdb_data$min_ma, UK_pbdb_data$max_ma))
-# 
-# # Now, it is your turn to generate the plot described in Activity 3...
 
-load("~/SOES1009/UK_pbdb_data.RData")
+# Download Paleobiology Database data for the UK
+UK_pbdb_url <- "https://paleobiodb.org/data1.2/occs/list.csv?cc=UK&pgm=gplates,scotese,seton&show=class,plant,ecospace,coll,loc,paleoloc,lith,env,geo"
+
+UK_pbdb_data <- read_csv(UK_pbdb_url)
+
+# Generate best estimate of occurence age by taking the mean of the minimum and maximum age step
+# for each fossil occurence (i.e. each row of the dataframe)
+UK_pbdb_data$mid_ma <- rowMeans(cbind(UK_pbdb_data$min_ma, UK_pbdb_data$max_ma))
+
+# Now, it is your turn to generate the plot described in Activity 3...
